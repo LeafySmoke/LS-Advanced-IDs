@@ -100,15 +100,14 @@ RegisterNetEvent("idcard:capturePhoto", function()
         CleanupCamera()
     end)
 
-    -- Screenshot
-    exports["screenshot-basic"]:requestScreenshotClient(function(data)
+    -- Screenshot - FIXED EXPORT NAME
+    exports["screenshot-basic"]:requestScreenshot(function(data)
         TriggerServerEvent("idcard:savePhoto", data)
         CleanupCamera()
         Notify("~g~ID photo captured!")
     end, {
         format = "png",
         quality = 0.85,
-        renderer = "directx",
         width = 280,
         height = 360
     })
