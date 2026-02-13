@@ -1,0 +1,99 @@
+<!-- html/index.html (realistic layouts) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Identification Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="card-container" class="hidden">
+        <!-- Driver's License (CA REAL ID style) -->
+        <div id="driver-template" class="card-template hidden driver-card">
+            <div class="guilloche-bg"></div>
+            <div class="header">
+                <span>SAN ANDREAS</span><br>
+                <strong>USA DRIVER LICENSE</strong>
+                <div class="bear-seal">🐻⭐</div>
+                <div class="photo"></div>
+            </div>
+            <div class="right-panel">
+                <div class="dl-field">DL <span class="dlNumber"></span></div>
+                <div class="dl-field">Class <span class="class"></span></div>
+                <div class="exp-field">EXP <span class="expDate"></span></div>
+                <div class="restr-field">END <span class="restrictions"></span></div>
+            </div>
+            <div class="photo">ID Photo</div>
+            <div class="personal-info">
+                <div class="name-field">
+                    <div class="ln">LN <span class="name-split-ln"></span></div>
+                    <div class="fn">FN <span class="name-split-fn"></span></div>
+                </div>
+                <div class="dob-field">DOB <span class="dob"></span></div>
+                <div class="address">123 Fake St, Los Santos, CA 90210</div> <!-- Placeholder -->
+                <div class="restr">RST <span class="restrictions"></span></div>
+            </div>
+            <div class="physical">
+                <div>SEX <span class="sexShort"></span></div>
+                <div>HGT <span class="heightFt"></span></div>
+                <div>WGT <span class="weight"></span></div>
+                <div>HAIR <span class="hair"></span></div>
+                <div>EYES <span class="eyes"></span></div>
+            </div>
+            <div class="signature-line">
+                <canvas class="signature" width="200" height="30"></canvas>
+            </div>
+            <div class="issue">ISS <span class="issueDate"></span></div>
+            <div class="holo"></div>
+        </div>
+
+        <!-- Police Badge (LAPD style) -->
+        <div id="badge-template" class="card-template hidden badge-card">
+            <div class="badge-shield">
+                <div class="eagle-left"></div>
+                <div class="eagle-right"></div>
+                <div class="rays"></div>
+                <div class="city-hall"></div>
+                <div class="city-seal">
+                    <div class="la-seal">LA</div>
+                </div>
+                <div class="dept-banner">
+                    <span>LOS SANTOS</span><br>
+                    <strong>POLICE</strong>
+                </div>
+                <div class="top-banner">
+                    <strong>POLICE OFFICER</strong>
+                </div>
+                <div class="badge-number"><span class="badgeNumber"></span></div>
+                <div class="rank-banner"><span class="rank"></span></div>
+            </div>
+            <div class="photo"></div>
+            <div class="info">
+                <p><strong>Officer:</strong> <span class="name"></span></p>
+                <p><strong>Department:</strong> <span class="department"></span></p>
+            </div>
+        </div>
+
+        <!-- Medical Marijuana Card (CA County style) -->
+        <div id="marijuana-template" class="card-template hidden mj-card">
+            <div class="header"><!-- ... --></div>
+            <div class="photo"></div>
+            <div class="header">
+                STATE OF SAN ANDREAS<br>
+                <strong>MEDICAL MARIJUANA IDENTIFICATION CARD</strong><br>
+                PATIENT
+            </div>
+            <div class="photo">Patient Photo</div>
+            <div class="card-id">ID # <span class="cardId"></span></div>
+            <div class="verify">To verify: <span class="verifyUrl"></span></div>
+            <div class="exp">Date of Expiration: <span class="expDate"></span></div>
+            <div class="county-logo">🩺 <span class="county"></span> Public Health</div>
+            <div class="phone"><span class="phone"></span></div>
+            <div class="state-seal">🏅 CA</div>
+            <div class="patient-name"><strong><span class="name"></span></strong></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
